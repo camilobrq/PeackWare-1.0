@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-   public class Proveedor: Persona
+    class FacturaCompra:Factura
     {
-        public string NombreEmpresa { get; set; }
-        public string  Pais { get; set; }
+        public FacturaCompra(Proveedor proveedor)
+        {
+            persona = proveedor;
+        }
     }
 }

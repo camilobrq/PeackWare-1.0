@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="DetalleFactura.cs" />
     <Compile Include="Factura.cs" />
+    <Compile Include="FacturaCompra.cs" />
+    <Compile Include="FacturaVenta.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
