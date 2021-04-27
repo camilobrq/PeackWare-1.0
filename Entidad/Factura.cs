@@ -32,7 +32,7 @@ namespace Entidad
             }
             else
             {
-                return Total = (CalcularSubtotal()  + detalleFactura.CalculaIva();
+                return Total = (CalcularSubtotal()  + detalleFactura.CalculaIva());
             }
         }
     }
