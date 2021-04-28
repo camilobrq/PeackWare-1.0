@@ -30,8 +30,8 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation10 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnBarraArriba = new System.Windows.Forms.Panel();
@@ -69,6 +69,8 @@ namespace Presentacion
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.PanelTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.LogoTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnBarraArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btnmaximizar)).BeginInit();
@@ -91,6 +93,7 @@ namespace Presentacion
             // pnBarraArriba
             // 
             this.pnBarraArriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.pnBarraArriba.Controls.Add(this.label8);
             this.pnBarraArriba.Controls.Add(this.BtnMinimizar);
             this.pnBarraArriba.Controls.Add(this.Btnmaximizar);
             this.pnBarraArriba.Controls.Add(this.BtnRestablecer);
@@ -100,7 +103,7 @@ namespace Presentacion
             this.pnBarraArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnBarraArriba.Location = new System.Drawing.Point(0, 0);
             this.pnBarraArriba.Name = "pnBarraArriba";
-            this.pnBarraArriba.Size = new System.Drawing.Size(800, 52);
+            this.pnBarraArriba.Size = new System.Drawing.Size(931, 52);
             this.pnBarraArriba.TabIndex = 0;
             this.pnBarraArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnBarraArriba_Paint);
             // 
@@ -112,7 +115,7 @@ namespace Presentacion
             this.PanelTransition.SetDecoration(this.BtnMinimizar, BunifuAnimatorNS.DecorationType.None);
             this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
             this.BtnMinimizar.ImageActive = null;
-            this.BtnMinimizar.Location = new System.Drawing.Point(691, 3);
+            this.BtnMinimizar.Location = new System.Drawing.Point(822, 3);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.Size = new System.Drawing.Size(28, 24);
             this.BtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -129,7 +132,7 @@ namespace Presentacion
             this.PanelTransition.SetDecoration(this.Btnmaximizar, BunifuAnimatorNS.DecorationType.None);
             this.Btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("Btnmaximizar.Image")));
             this.Btnmaximizar.ImageActive = null;
-            this.Btnmaximizar.Location = new System.Drawing.Point(725, 3);
+            this.Btnmaximizar.Location = new System.Drawing.Point(856, 3);
             this.Btnmaximizar.Name = "Btnmaximizar";
             this.Btnmaximizar.Size = new System.Drawing.Size(28, 24);
             this.Btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,7 +149,7 @@ namespace Presentacion
             this.PanelTransition.SetDecoration(this.BtnRestablecer, BunifuAnimatorNS.DecorationType.None);
             this.BtnRestablecer.Image = ((System.Drawing.Image)(resources.GetObject("BtnRestablecer.Image")));
             this.BtnRestablecer.ImageActive = null;
-            this.BtnRestablecer.Location = new System.Drawing.Point(725, 3);
+            this.BtnRestablecer.Location = new System.Drawing.Point(856, 3);
             this.BtnRestablecer.Name = "BtnRestablecer";
             this.BtnRestablecer.Size = new System.Drawing.Size(28, 24);
             this.BtnRestablecer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +167,7 @@ namespace Presentacion
             this.PanelTransition.SetDecoration(this.BtnCerrar, BunifuAnimatorNS.DecorationType.None);
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
             this.BtnCerrar.ImageActive = null;
-            this.BtnCerrar.Location = new System.Drawing.Point(760, 3);
+            this.BtnCerrar.Location = new System.Drawing.Point(891, 3);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(28, 24);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -176,6 +179,7 @@ namespace Presentacion
             // PnOpciones
             // 
             this.PnOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.PnOpciones.Controls.Add(this.label1);
             this.PnOpciones.Controls.Add(this.panelConsultar);
             this.PnOpciones.Controls.Add(this.BtnConsulta);
             this.PnOpciones.Controls.Add(this.panelFactura);
@@ -188,7 +192,7 @@ namespace Presentacion
             this.PnOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnOpciones.Location = new System.Drawing.Point(0, 52);
             this.PnOpciones.Name = "PnOpciones";
-            this.PnOpciones.Size = new System.Drawing.Size(194, 494);
+            this.PnOpciones.Size = new System.Drawing.Size(194, 499);
             this.PnOpciones.TabIndex = 1;
             // 
             // panelConsultar
@@ -583,7 +587,7 @@ namespace Presentacion
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(194, 52);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(606, 494);
+            this.PanelContenedor.Size = new System.Drawing.Size(737, 499);
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PnPrincipal_Paint);
             // 
@@ -603,49 +607,77 @@ namespace Presentacion
             // 
             this.PanelTransition.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.PanelTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 1;
-            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 2F;
-            animation2.TransparencyCoeff = 0F;
-            this.PanelTransition.DefaultAnimation = animation2;
+            animation10.AnimateOnlyDifferences = true;
+            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
+            animation10.LeafCoeff = 0F;
+            animation10.MaxTime = 1F;
+            animation10.MinTime = 0F;
+            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
+            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
+            animation10.MosaicSize = 1;
+            animation10.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation10.RotateCoeff = 0F;
+            animation10.RotateLimit = 0F;
+            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
+            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
+            animation10.TimeCoeff = 2F;
+            animation10.TransparencyCoeff = 0F;
+            this.PanelTransition.DefaultAnimation = animation10;
             // 
             // LogoTransition
             // 
             this.LogoTransition.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
             this.LogoTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(30);
-            animation1.RotateCoeff = 0.5F;
-            animation1.RotateLimit = 0.2F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.LogoTransition.DefaultAnimation = animation1;
+            animation9.AnimateOnlyDifferences = true;
+            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
+            animation9.LeafCoeff = 0F;
+            animation9.MaxTime = 1F;
+            animation9.MinTime = 0F;
+            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
+            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
+            animation9.MosaicSize = 0;
+            animation9.Padding = new System.Windows.Forms.Padding(30);
+            animation9.RotateCoeff = 0.5F;
+            animation9.RotateLimit = 0.2F;
+            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
+            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
+            animation9.TimeCoeff = 0F;
+            animation9.TransparencyCoeff = 0F;
+            this.LogoTransition.DefaultAnimation = animation9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.PanelTransition.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.label8.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(12, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 16);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "PeackWare";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.PanelTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(3, 587);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "PeackWare";
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 546);
+            this.ClientSize = new System.Drawing.Size(931, 551);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PnOpciones);
             this.Controls.Add(this.pnBarraArriba);
@@ -656,11 +688,13 @@ namespace Presentacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pnBarraArriba.ResumeLayout(false);
+            this.pnBarraArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRestablecer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.PnOpciones.ResumeLayout(false);
+            this.PnOpciones.PerformLayout();
             this.panelConsultar.ResumeLayout(false);
             this.panelFactura.ResumeLayout(false);
             this.panelRegistrar.ResumeLayout(false);
@@ -709,6 +743,8 @@ namespace Presentacion
         private System.Windows.Forms.Button BtnFactura;
         private System.Windows.Forms.Panel panelConsultar;
         private System.Windows.Forms.Button BtnConsulta;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
     }
 }
 

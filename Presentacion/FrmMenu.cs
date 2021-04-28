@@ -129,16 +129,19 @@ namespace Presentacion
 
         private void BtnConsultaCliente_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmConsultaCliente>();
             OcultarSubMenu();
         }
 
         private void BtnConsultaProveedores_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmConsultaProveedores>();
             OcultarSubMenu();
         }
 
         private void BtnConsultaFactura_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmConsultaFactura>();
             OcultarSubMenu();
         }
 
