@@ -31,29 +31,25 @@ namespace Presentacion
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroCliente));
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.labelnombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtEdad = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.ComboSexo = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // labelnombre
             // 
@@ -122,47 +118,45 @@ namespace Presentacion
             this.label5.TabIndex = 5;
             this.label5.Text = "Sexo:";
             // 
-            // textBox1
+            // TxtIdentificacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 6;
+            this.TxtIdentificacion.Location = new System.Drawing.Point(183, 55);
+            this.TxtIdentificacion.Name = "TxtIdentificacion";
+            this.TxtIdentificacion.Size = new System.Drawing.Size(157, 20);
+            this.TxtIdentificacion.TabIndex = 6;
+            this.TxtIdentificacion.Validating += new System.ComponentModel.CancelEventHandler(this.TxtIdentifiacion_Validating);
             // 
-            // textBox2
+            // TxtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(183, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 20);
-            this.textBox2.TabIndex = 7;
+            this.TxtNombre.Location = new System.Drawing.Point(183, 106);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(157, 20);
+            this.TxtNombre.TabIndex = 7;
+            this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
+            this.TxtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNombre_Validating);
             // 
-            // textBox3
+            // TxtEdad
             // 
-            this.textBox3.Location = new System.Drawing.Point(183, 156);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 20);
-            this.textBox3.TabIndex = 8;
+            this.TxtEdad.Location = new System.Drawing.Point(183, 203);
+            this.TxtEdad.Name = "TxtEdad";
+            this.TxtEdad.Size = new System.Drawing.Size(157, 20);
+            this.TxtEdad.TabIndex = 9;
+            this.TxtEdad.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEdad_Validating);
             // 
-            // textBox4
+            // TxtTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(183, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(157, 20);
-            this.textBox4.TabIndex = 9;
+            this.TxtTelefono.Location = new System.Drawing.Point(183, 261);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(157, 20);
+            this.TxtTelefono.TabIndex = 10;
+            this.TxtTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.TxtTelefono_Validating);
             // 
-            // textBox5
+            // TxtDireccion
             // 
-            this.textBox5.Location = new System.Drawing.Point(183, 261);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(157, 20);
-            this.textBox5.TabIndex = 10;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(183, 312);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(157, 20);
-            this.textBox6.TabIndex = 11;
+            this.TxtDireccion.Location = new System.Drawing.Point(183, 312);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(157, 20);
+            this.TxtDireccion.TabIndex = 11;
             // 
             // button1
             // 
@@ -172,6 +166,7 @@ namespace Presentacion
             this.button1.TabIndex = 12;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnCerrar
             // 
@@ -196,21 +191,35 @@ namespace Presentacion
             this.label8.TabIndex = 32;
             this.label8.Text = "Cliente";
             // 
+            // ComboSexo
+            // 
+            this.ComboSexo.FormattingEnabled = true;
+            this.ComboSexo.Location = new System.Drawing.Point(183, 155);
+            this.ComboSexo.Name = "ComboSexo";
+            this.ComboSexo.Size = new System.Drawing.Size(157, 21);
+            this.ComboSexo.TabIndex = 33;
+            this.ComboSexo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.ComboSexo.Validating += new System.ComponentModel.CancelEventHandler(this.ComboSexo_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmRegistroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(470, 450);
+            this.Controls.Add(this.ComboSexo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtDireccion);
+            this.Controls.Add(this.TxtTelefono);
+            this.Controls.Add(this.TxtEdad);
+            this.Controls.Add(this.TxtNombre);
+            this.Controls.Add(this.TxtIdentificacion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -220,15 +229,16 @@ namespace Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRegistroCliente";
             this.Text = "FrmRegistroCliente";
+            this.Load += new System.EventHandler(this.FrmRegistroCliente_Load);
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.FrmRegistroCliente_Validating);
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label labelnombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -236,13 +246,14 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox TxtEdad;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtIdentificacion;
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox ComboSexo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

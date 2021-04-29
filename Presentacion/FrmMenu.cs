@@ -118,12 +118,13 @@ namespace Presentacion
 
         private void BtnFacturaCompra_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<FrmFacturaCompra>();
             OcultarSubMenu();
         }
 
         private void BtnFacturaVenta_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmFacturaVenta>();
             OcultarSubMenu();
         }
 

@@ -51,12 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu.Designer.cs">
-      <DependentUpon>FormMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +68,18 @@
     </Compile>
     <Compile Include="FrmConsultaProveedores.Designer.cs">
       <DependentUpon>FrmConsultaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFacturaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFacturaCompra.Designer.cs">
+      <DependentUpon>FrmFacturaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFacturaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFacturaVenta.Designer.cs">
+      <DependentUpon>FrmFacturaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -101,9 +107,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormMenu.resx">
-      <DependentUpon>FormMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaCliente.resx">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaProveedores.resx">
       <DependentUpon>FrmConsultaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFacturaCompra.resx">
+      <DependentUpon>FrmFacturaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFacturaVenta.resx">
+      <DependentUpon>FrmFacturaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
