@@ -30,6 +30,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturaVenta));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Lbimporte = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -56,14 +57,17 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.TxtIdFactura = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.BtnCerrar);
             this.panel1.Controls.Add(this.Lbimporte);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.LbSubtotal);
@@ -334,6 +338,18 @@ namespace Presentacion
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Location = new System.Drawing.Point(3, 5);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(28, 20);
+            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnCerrar.TabIndex = 54;
+            this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // FrmFacturaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +363,7 @@ namespace Presentacion
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,5 +396,6 @@ namespace Presentacion
         private System.Windows.Forms.Label LbSubtotal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox BtnCerrar;
     }
 }

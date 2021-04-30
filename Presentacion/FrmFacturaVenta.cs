@@ -170,5 +170,13 @@ namespace Presentacion
                 errorProvider1.SetError(TxtCodigoProducto, "");
             }
         }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿esta seguro de cerrar esta pestaña?", "¡alerta!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

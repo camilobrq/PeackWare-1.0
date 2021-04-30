@@ -30,6 +30,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturaCompra));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Lbimporte = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -41,6 +42,13 @@ namespace Presentacion
             this.BtnFacturar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
+            this.TablaProducto = new System.Windows.Forms.DataGridView();
+            this.CProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtDescuento = new System.Windows.Forms.TextBox();
@@ -59,21 +67,17 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.TxtIdFactura = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.TablaProducto = new System.Windows.Forms.DataGridView();
-            this.CProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.BtnCerrar);
             this.panel1.Controls.Add(this.Lbimporte);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.LbSubtotal);
@@ -212,6 +216,52 @@ namespace Presentacion
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(129, 20);
             this.TxtDescripcion.TabIndex = 18;
+            // 
+            // TablaProducto
+            // 
+            this.TablaProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CProducto,
+            this.NombreProducto,
+            this.Descripcion,
+            this.PrecioUnitario,
+            this.Cantidad,
+            this.Descuento});
+            this.TablaProducto.Location = new System.Drawing.Point(109, 81);
+            this.TablaProducto.Name = "TablaProducto";
+            this.TablaProducto.Size = new System.Drawing.Size(643, 194);
+            this.TablaProducto.TabIndex = 17;
+            this.TablaProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaProducto_CellContentClick);
+            // 
+            // CProducto
+            // 
+            this.CProducto.HeaderText = "Codigo Producto";
+            this.CProducto.Name = "CProducto";
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre del Producto";
+            this.NombreProducto.Name = "NombreProducto";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.HeaderText = "Precio Por Unidad";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Descuento
+            // 
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
             // 
             // BtnAgregar
             // 
@@ -379,51 +429,17 @@ namespace Presentacion
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // TablaProducto
+            // BtnCerrar
             // 
-            this.TablaProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CProducto,
-            this.NombreProducto,
-            this.Descripcion,
-            this.PrecioUnitario,
-            this.Cantidad,
-            this.Descuento});
-            this.TablaProducto.Location = new System.Drawing.Point(109, 81);
-            this.TablaProducto.Name = "TablaProducto";
-            this.TablaProducto.Size = new System.Drawing.Size(643, 194);
-            this.TablaProducto.TabIndex = 17;
-            this.TablaProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaProducto_CellContentClick);
-            // 
-            // CProducto
-            // 
-            this.CProducto.HeaderText = "Codigo Producto";
-            this.CProducto.Name = "CProducto";
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre del Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.HeaderText = "Precio Por Unidad";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Descuento
-            // 
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Location = new System.Drawing.Point(0, 0);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(28, 20);
+            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnCerrar.TabIndex = 53;
+            this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // FrmFacturaCompra
             // 
@@ -436,8 +452,9 @@ namespace Presentacion
             this.Text = "FrmFacturaCompra";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -480,5 +497,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
+        private System.Windows.Forms.PictureBox BtnCerrar;
     }
 }

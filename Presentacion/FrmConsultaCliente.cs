@@ -27,7 +27,7 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿esta seguro de cerrar esta pestaña?", "¡alerta!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿esta seguro de querer eliminar este cliente?", "¡alerta!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 
             }

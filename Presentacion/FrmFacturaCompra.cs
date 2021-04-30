@@ -14,9 +14,8 @@ namespace Presentacion
 {
     public partial class FrmFacturaCompra : Form
     {
-        private object proveedor;
-        private object DetalleFacturas;
-
+        DetalleFactura detalleFactura = new DetalleFactura();
+        List<DetalleFactura> listaProductos = new List<DetalleFactura>();
         public FrmFacturaCompra()
         {
             InitializeComponent();
@@ -27,8 +26,9 @@ namespace Presentacion
             BorrarMenajes();
            if(ValidarCampos())
             {
-                AgregarProductos();
+               
                 MessageBox.Show("Datos Ingresados Correctamente");
+                TablaProducto.DataSource = detalleFactura;
                 TxtDescuento.Text = "";
                 TxtCantidad.Text = "";
                 TxtCodigoProducto.Text = "";
@@ -205,29 +205,26 @@ namespace Presentacion
         {
 
             Proveedor persona = new Proveedor();
-           
+
             Factura facturaCompra = new FacturaCompra(persona)
             {
                 IdFactura = TxtIdFactura.Text,
                 IdPersona = TxtIdProveedor.Text,
                 Fecha = Convert.ToDateTime(TxtFecha.Text),
                 Total = Convert.ToDecimal(LbTotal.Text),
-                Subtotal = Convert.ToDecimal(LbSubtotal.Text),
-                
+                Subtotal = Convert.ToDecimal(LbSubtotal.Text)
+             
 
 
             };
             
            
         }
-        private void listaProducto()
-        {
-           
-        }
+     
         public void AgregarProductos()
         {
-            DetalleFactura detalleFactura = new DetalleFactura();
-            List<DetalleFactura> listaProductos = new List<DetalleFactura>();
+            
+           
             detalleFactura.producto.CodigoProducto = TxtCodigoProducto.Text;
             detalleFactura.producto.Cantidad = Convert.ToInt32(TxtCantidad.Text);
             detalleFactura.producto.Descuento = Convert.ToDecimal(TxtDescuento.Text);
@@ -237,11 +234,7 @@ namespace Presentacion
             detalleFactura.CalcularDescuento();
             detalleFactura.CalcularImporte();
             listaProductos.Add(detalleFactura);
-            
-            
-            
-            
-
+                                             
         }
 
         private void TxtNombre_Validating(object sender, CancelEventArgs e)
@@ -273,6 +266,14 @@ namespace Presentacion
         private void TablaProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿esta seguro de cerrar esta pestaña?", "¡alerta!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
