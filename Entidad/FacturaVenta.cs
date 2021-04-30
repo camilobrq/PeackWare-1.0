@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public class FacturaVenta: Factura
+   public class FacturaVenta: Factura
     {
         public FacturaVenta(Cliente cliente)
         {
-           
             persona = cliente;
         }
     }
