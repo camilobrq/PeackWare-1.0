@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Entidad;
+
 namespace Presentacion
 {
     public partial class FrmFacturaCompra : Form
     {
+        private object proveedor;
+        private object DetalleFacturas;
+
         public FrmFacturaCompra()
         {
             InitializeComponent();
@@ -22,6 +27,7 @@ namespace Presentacion
             BorrarMenajes();
            if(ValidarCampos())
             {
+                AgregarProductos();
                 MessageBox.Show("Datos Ingresados Correctamente");
                 TxtDescuento.Text = "";
                 TxtCantidad.Text = "";
@@ -195,6 +201,49 @@ namespace Presentacion
             }
         }
 
+        private void Facturar()
+        {
+
+            Proveedor persona = new Proveedor();
+           
+            Factura facturaCompra = new FacturaCompra(persona)
+            {
+                IdFactura = TxtIdFactura.Text,
+                IdPersona = TxtIdProveedor.Text,
+                Fecha = Convert.ToDateTime(TxtFecha.Text),
+                Total = Convert.ToDecimal(LbTotal.Text),
+                Subtotal = Convert.ToDecimal(LbSubtotal.Text),
+                
+
+
+            };
+            
+           
+        }
+        private void listaProducto()
+        {
+           
+        }
+        public void AgregarProductos()
+        {
+            DetalleFactura detalleFactura = new DetalleFactura();
+            List<DetalleFactura> listaProductos = new List<DetalleFactura>();
+            detalleFactura.producto.CodigoProducto = TxtCodigoProducto.Text;
+            detalleFactura.producto.Cantidad = Convert.ToInt32(TxtCantidad.Text);
+            detalleFactura.producto.Descuento = Convert.ToDecimal(TxtDescuento.Text);
+            detalleFactura.producto.NombreProducto = TxtNombre.Text;
+            detalleFactura.producto.PrecioUnidad = Convert.ToDecimal(TxtPrecioUnitario.Text);
+            detalleFactura.CalculaIva();
+            detalleFactura.CalcularDescuento();
+            detalleFactura.CalcularImporte();
+            listaProductos.Add(detalleFactura);
+            
+            
+            
+            
+
+        }
+
         private void TxtNombre_Validating(object sender, CancelEventArgs e)
         {
             bool resultado = Regex.IsMatch(TxtNombre.Text, @"^[a-zA-Z]+$");
@@ -219,6 +268,11 @@ namespace Presentacion
             {
                 errorProvider1.SetError(TxtCodigoProducto, "");
             }
+        }
+
+        private void TablaProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

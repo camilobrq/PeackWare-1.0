@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
+using Entidad;
 namespace Presentacion
 {
     public partial class FrmRegistroCliente : Form
@@ -88,6 +89,7 @@ namespace Presentacion
             BorrarMenajes();
             if (ValidarCampos())
             {
+                AgregarCliente();
                 MessageBox.Show("Cliente Registrado Satisfactoriamente");
                 TxtNombre.Text = "";
                 TxtIdentificacion.Text = "";
@@ -97,7 +99,18 @@ namespace Presentacion
 
             }
         }
-
+        private void AgregarCliente()
+        {
+            Persona cliente = new Cliente
+            {
+                Identificacion = TxtIdentificacion.Text,
+                Nombre = TxtNombre.Text,
+                Sexo = ComboSexo.Text,
+                Edad = Convert.ToInt32(TxtEdad.Text),
+                Telefono=TxtTelefono.Text,
+                Direccion=TxtDireccion.Text
+            };
+        }
         private void TxtEdad_Validating(object sender, CancelEventArgs e)
         {
             int num;

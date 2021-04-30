@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Entidad;
 
 namespace Presentacion
 {
@@ -83,6 +84,7 @@ namespace Presentacion
             BorrarMenajes();
             if (ValidarCampos())
             {
+                AgregarProovedor();
                 MessageBox.Show("Proveedor Registrado Correctamente");
                 TxtIdenficiacion.Text="";
                 TxtNombre.Text = "";
@@ -94,6 +96,22 @@ namespace Presentacion
                
             }
         }
+        private void AgregarProovedor()
+        {
+            Persona proveedor = new Proveedor
+            {
+               
+                Identificacion = TxtIdenficiacion.Text,
+                Nombre = TxtNombre.Text,
+                Sexo = ComboSexo.Text,
+                Edad = Convert.ToInt32(TxtEdad.Text),
+                Telefono = TxtTelefono.Text,
+                Direccion = TxtDireccion.Text,
+                Pais = TxtPais.Text,
+                NombreEmpresa = TxtEmpresa.Text,
+            };
+        }
+
 
         private void TxtIdenficiacion_Validating(object sender, CancelEventArgs e)
         {
