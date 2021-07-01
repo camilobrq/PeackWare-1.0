@@ -42,17 +42,17 @@ namespace Presentacion
                     ok = false;
                     errorProvider1.SetError(TxtIdCliente, "Debe digitar la identificacion del proveedor");
                 }
-                if (TxtFechaCompra.Text == "")
+                /*if (TxtFechaCompra.Text == "")
                 {
                     ok = false;
                     errorProvider1.SetError(TxtFechaCompra, "Debe digitar la fecha de la factura");
-                }
+                }*/
                 return ok;
             }
             private void BorrarMenajesFactura()
             {
                 errorProvider1.SetError(TxtIdFactura, "");
-                errorProvider1.SetError(TxtFechaCompra, "");
+               // errorProvider1.SetError(TxtFechaCompra, "");
                 errorProvider1.SetError(TxtIdCliente, "");
 
             }
@@ -114,7 +114,7 @@ namespace Presentacion
                 MessageBox.Show("Facturado Correctamente");
                 TxtIdFactura.Text = "";
                 TxtIdCliente.Text = "";
-                TxtFechaCompra.Text = "";
+             //   TxtFechaCompra.Text = "";
             }
 
         }
@@ -177,6 +177,16 @@ namespace Presentacion
             {
                 this.Close();
             }
+        }
+
+        private void TxtCodigoProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtIdFactura_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

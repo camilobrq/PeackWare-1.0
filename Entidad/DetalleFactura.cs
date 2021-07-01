@@ -16,22 +16,27 @@ namespace Entidad
         public decimal Iva { get; set; }
         public decimal Descuento { get; set; }
         decimal porcentajeIva = 1.19m;
-       public decimal CalcularImporte()
+       public void CalcularImporte()
         {
-            return Importe = producto.PrecioUnidad *producto.Cantidad;
+            Importe = producto.PrecioUnidad *producto.Cantidad;
         }
 
-        public decimal CalculaIva()
+        public void CalculaIva()
         {
-            return Iva=(producto.PrecioUnidad * producto.Cantidad) * porcentajeIva;
+            CalcularImporte();
+            CalcularDescuento();
+             Iva=(Importe-Descuento) * porcentajeIva;
         }
-        public decimal CalcularDescuento()
+        public void CalcularDescuento()
         {
+            Descuento = 0;
+            CalcularImporte();
             if (producto.Descuento>0)
             {
-                return Descuento = (CalculaIva() * producto.Descuento);
+            
+                 Descuento = (Importe * producto.Descuento);
             }
-            return 0;
+           
         }
     }
 }

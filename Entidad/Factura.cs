@@ -18,22 +18,19 @@ namespace Entidad
        
         public decimal Total { get; set; }
 
-        public decimal CalcularSubtotal()
+        public void CalcularSubtotal()
         {
-           
-           return Subtotal = detalleFactura.CalcularImporte();
+            detalleFactura.CalcularImporte();
+            Subtotal = detalleFactura.Importe;
         }
 
-        public decimal CalcularTotal()
+        public void CalcularTotal()
         {
-            if (detalleFactura.CalcularDescuento()>0)
-            {
-                return Total = (CalcularSubtotal() - detalleFactura.CalcularDescuento()) + detalleFactura.CalculaIva();
-            }
-            else
-            {
-                return Total = (CalcularSubtotal()  + detalleFactura.CalculaIva());
-            }
+           CalcularSubtotal();
+           detalleFactura.CalcularDescuento();
+           detalleFactura.CalculaIva();
+           Total = (Subtotal -detalleFactura.Descuento) + detalleFactura.Iva;
+         
         }
     }
 }

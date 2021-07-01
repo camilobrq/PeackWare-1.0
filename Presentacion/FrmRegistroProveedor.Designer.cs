@@ -32,6 +32,7 @@ namespace Presentacion
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroProveedor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ComboSexo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtEmpresa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelnombre = new System.Windows.Forms.Label();
-            this.ComboSexo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -84,6 +84,17 @@ namespace Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(517, 469);
             this.panel1.TabIndex = 0;
+            // 
+            // ComboSexo
+            // 
+            this.ComboSexo.FormattingEnabled = true;
+            this.ComboSexo.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.ComboSexo.Location = new System.Drawing.Point(240, 146);
+            this.ComboSexo.Name = "ComboSexo";
+            this.ComboSexo.Size = new System.Drawing.Size(157, 21);
+            this.ComboSexo.TabIndex = 32;
             // 
             // label8
             // 
@@ -260,14 +271,6 @@ namespace Presentacion
             this.labelnombre.Size = new System.Drawing.Size(96, 19);
             this.labelnombre.TabIndex = 13;
             this.labelnombre.Text = "Identifiacion:";
-            // 
-            // ComboSexo
-            // 
-            this.ComboSexo.FormattingEnabled = true;
-            this.ComboSexo.Location = new System.Drawing.Point(240, 146);
-            this.ComboSexo.Name = "ComboSexo";
-            this.ComboSexo.Size = new System.Drawing.Size(157, 21);
-            this.ComboSexo.TabIndex = 32;
             // 
             // errorProvider1
             // 

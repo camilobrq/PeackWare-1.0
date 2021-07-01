@@ -28,7 +28,7 @@ namespace Presentacion
             {
                
                 MessageBox.Show("Datos Ingresados Correctamente");
-                TablaProducto.DataSource = detalleFactura;
+                //TablaProducto.DataSource = detalleFactura;
                 TxtDescuento.Text = "";
                 TxtCantidad.Text = "";
                 TxtCodigoProducto.Text = "";
@@ -50,17 +50,17 @@ namespace Presentacion
                 ok = false;
                 errorProvider1.SetError(TxtIdProveedor, "Debe digitar la identificacion del proveedor");
             }
-            if (TxtFecha.Text == "")
+           /* if (TxtFecha.Text == "")
             {
                 ok = false;
                 errorProvider1.SetError(TxtFecha, "Debe digitar la fecha de la factura");
-            }
+            }*/
             return ok;
         }
         private void BorrarMenajesFactura()
         {
             errorProvider1.SetError(TxtIdFactura, "");
-            errorProvider1.SetError(TxtFecha, "");
+         //   errorProvider1.SetError(TxtFecha, "");
             errorProvider1.SetError(TxtIdProveedor, "");
             
         }
@@ -125,7 +125,7 @@ namespace Presentacion
         private void TxtFecha_Validating(object sender, CancelEventArgs e)
         {
             DateTime Fecha;
-            if (!DateTime.TryParse(TxtFecha.Text, out Fecha))
+          /*  if (!DateTime.TryParse(TxtFecha.Text, out Fecha))
             {
                 errorProvider1.SetError(TxtFecha, "solo formato fechas eje: 29/04/2021");
             }
@@ -133,7 +133,7 @@ namespace Presentacion
             {
                 errorProvider1.SetError(TxtFecha, "");
             }
-
+          */
         }
 
         private void TxtPrecioUnitario_Validating(object sender, CancelEventArgs e)
@@ -195,7 +195,7 @@ namespace Presentacion
             {
                 MessageBox.Show("Facturado Correctamente");
                 TxtIdProveedor.Text = "";
-                TxtFecha.Text = "";
+              //  TxtFecha.Text = "";
                 TxtIdFactura.Text = "";
 
             }
@@ -210,7 +210,7 @@ namespace Presentacion
             {
                 IdFactura = TxtIdFactura.Text,
                 IdPersona = TxtIdProveedor.Text,
-                Fecha = Convert.ToDateTime(TxtFecha.Text),
+            //    Fecha = Convert.ToDateTime(TxtFecha.Text),
                 Total = Convert.ToDecimal(LbTotal.Text),
                 Subtotal = Convert.ToDecimal(LbSubtotal.Text)
              
@@ -274,6 +274,11 @@ namespace Presentacion
             {
                 this.Close();
             }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

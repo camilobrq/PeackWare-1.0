@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Entidad;
-
+using Logica;
 namespace Presentacion
 {
     public partial class FrmRegistroProveedor : Form
     {
+        ProveedorService proveedorService;
         public FrmRegistroProveedor()
         {
+            proveedorService = new ProveedorService(ConfigConnection.connectionString);
             InitializeComponent();
         }
 
@@ -81,26 +83,32 @@ namespace Presentacion
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
-            BorrarMenajes();
-            if (ValidarCampos())
+            /* BorrarMenajes();
+             if (ValidarCampos())
+             {
+                 AgregarProovedor();
+
+                 TxtIdenficiacion.Text="";
+                 TxtNombre.Text = "";
+                 TxtEdad.Text = "";
+                 TxtTelefono.Text = "";
+                 TxtDireccion.Text = "";
+                 TxtPais.Text = "";
+                 TxtEmpresa.Text = "";
+
+             }
+             /*
+               public string Identificacion { get; set; }
+         public string Nombre { get; set; }
+         public string Sexo { get; set; }
+         public int Edad { get; set; }
+         public string Telefono { get; set; }
+         public string Direccion { get; set; }
+
+              */
+            Proveedor proveedor = new Proveedor()
             {
-                AgregarProovedor();
-                MessageBox.Show("Proveedor Registrado Correctamente");
-                TxtIdenficiacion.Text="";
-                TxtNombre.Text = "";
-                TxtEdad.Text = "";
-                TxtTelefono.Text = "";
-                TxtDireccion.Text = "";
-                TxtPais.Text = "";
-                TxtEmpresa.Text = "";
-               
-            }
-        }
-        private void AgregarProovedor()
-        {
-            Persona proveedor = new Proveedor
-            {
-               
+
                 Identificacion = TxtIdenficiacion.Text,
                 Nombre = TxtNombre.Text,
                 Sexo = ComboSexo.Text,
@@ -110,6 +118,13 @@ namespace Presentacion
                 Pais = TxtPais.Text,
                 NombreEmpresa = TxtEmpresa.Text,
             };
+            MessageBox.Show(proveedorService.Guardar(proveedor));
+        
+          
+        }
+        private void AgregarProovedor()
+        {
+           
         }
 
 

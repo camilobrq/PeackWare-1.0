@@ -8,6 +8,7 @@ namespace Entidad
 {
    public class Proveedor: Persona
     {
+   
         public string NombreEmpresa { get; set; }
         public string  Pais { get; set; }
     }
