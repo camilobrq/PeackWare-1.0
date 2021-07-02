@@ -39,6 +39,15 @@ namespace Presentacion
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
+            this.BtnConsultarTodos = new System.Windows.Forms.Button();
+            this.LbMasculinos = new System.Windows.Forms.Label();
+            this.LbFemenino = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LbM = new System.Windows.Forms.Label();
+            this.LbF = new System.Windows.Forms.Label();
+            this.LbT = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -52,9 +61,9 @@ namespace Presentacion
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 47);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(621, 266);
+            this.dataGridView1.Size = new System.Drawing.Size(621, 205);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -117,12 +126,101 @@ namespace Presentacion
             this.BtnCerrar.TabStop = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
+            // BtnConsultarTodos
+            // 
+            this.BtnConsultarTodos.Location = new System.Drawing.Point(82, 351);
+            this.BtnConsultarTodos.Name = "BtnConsultarTodos";
+            this.BtnConsultarTodos.Size = new System.Drawing.Size(147, 23);
+            this.BtnConsultarTodos.TabIndex = 28;
+            this.BtnConsultarTodos.Text = "Consultar Toda la Tabla";
+            this.BtnConsultarTodos.UseVisualStyleBackColor = true;
+            this.BtnConsultarTodos.Click += new System.EventHandler(this.BtnConsultarTodos_Click);
+            // 
+            // LbMasculinos
+            // 
+            this.LbMasculinos.AutoSize = true;
+            this.LbMasculinos.Location = new System.Drawing.Point(530, 301);
+            this.LbMasculinos.Name = "LbMasculinos";
+            this.LbMasculinos.Size = new System.Drawing.Size(63, 13);
+            this.LbMasculinos.TabIndex = 29;
+            this.LbMasculinos.Text = "Masculinos:";
+            // 
+            // LbFemenino
+            // 
+            this.LbFemenino.AutoSize = true;
+            this.LbFemenino.Location = new System.Drawing.Point(530, 333);
+            this.LbFemenino.Name = "LbFemenino";
+            this.LbFemenino.Size = new System.Drawing.Size(56, 13);
+            this.LbFemenino.TabIndex = 30;
+            this.LbFemenino.Text = "Femenino:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(530, 361);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Total";
+            // 
+            // LbM
+            // 
+            this.LbM.AutoSize = true;
+            this.LbM.Location = new System.Drawing.Point(619, 301);
+            this.LbM.Name = "LbM";
+            this.LbM.Size = new System.Drawing.Size(13, 13);
+            this.LbM.TabIndex = 32;
+            this.LbM.Text = "0";
+            // 
+            // LbF
+            // 
+            this.LbF.AutoSize = true;
+            this.LbF.Location = new System.Drawing.Point(619, 333);
+            this.LbF.Name = "LbF";
+            this.LbF.Size = new System.Drawing.Size(13, 13);
+            this.LbF.TabIndex = 33;
+            this.LbF.Text = "0";
+            // 
+            // LbT
+            // 
+            this.LbT.AutoSize = true;
+            this.LbT.Location = new System.Drawing.Point(619, 361);
+            this.LbT.Name = "LbT";
+            this.LbT.Size = new System.Drawing.Size(13, 13);
+            this.LbT.TabIndex = 34;
+            this.LbT.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(530, 272);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Conteo De Clientes";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(365, 290);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 36;
+            // 
             // FrmConsultaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(720, 409);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LbT);
+            this.Controls.Add(this.LbF);
+            this.Controls.Add(this.LbM);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.LbFemenino);
+            this.Controls.Add(this.LbMasculinos);
+            this.Controls.Add(this.BtnConsultarTodos);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -151,5 +249,14 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox BtnCerrar;
+        private System.Windows.Forms.Button BtnConsultarTodos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LbT;
+        private System.Windows.Forms.Label LbF;
+        private System.Windows.Forms.Label LbM;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LbFemenino;
+        private System.Windows.Forms.Label LbMasculinos;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

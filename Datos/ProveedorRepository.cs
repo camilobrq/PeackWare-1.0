@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,7 @@ namespace Datos
         {
             using (var command = _connection.CreateCommand())
             {
-                /* public string Identificacion { get; set; }
-        public string Nombre { get; set; }
-        public string Sexo { get; set; }
-        public int Edad { get; set; }
-        public string Telefono { get; set; }
-        public string Direccion { get; set; }
-                public string NombreEmpresa { get; set; }
-        public string  Pais { get; set; }*/
+     
 
                 command.CommandText = @"Insert Into Proveedor (Identificacion,Nombre,Sexo,Edad,Telefono,Direccion,NombreEmpresa,Pais)
                 values (@Identificacion,@Nombre,@Sexo, @Edad, @Telefono,@Direccion,@NombreEmpresa,@Pais)";
@@ -44,5 +38,81 @@ namespace Datos
                 return filas;
             }
         }
+
+  
+        public List<Proveedor> BuscarPorIdentificacion(string identificacion)
+        {
+            SqlDataReader dataReader;
+            List<Proveedor> Proveedores = new List<Proveedor>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "select* from Proveedor where Identificacion==Identificacion";
+
+                command.Parameters.AddWithValue(":Identificacion", identificacion);
+                dataReader = command.ExecuteReader();
+              ;
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Proveedor proveedor = DataReaderMapToPerson(dataReader);
+                        Proveedores.Add(proveedor);
+                    }
+                    dataReader.Close();
+                }
+             
+                return Proveedores;
+            }
+        }
+      
+        public List<Proveedor> ConsultarTodos()
+        {
+            SqlDataReader dataReader;
+            List<Proveedor> Proveedores = new List<Proveedor>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "Select * from Proveedor ";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Proveedor proveedor = DataReaderMapToPerson(dataReader);
+                        Proveedores.Add(proveedor);
+                    }
+                    dataReader.Close();
+                }
+            }
+            return Proveedores;
+        }
+        private Proveedor DataReaderMapToPerson(SqlDataReader dataReader)
+        {
+            if (!dataReader.HasRows) return null;
+            Proveedor proveedor = new Proveedor();
+            proveedor.Identificacion = (string)dataReader["Identificacion"];
+            proveedor.Nombre = (string)dataReader["Nombre"];
+            proveedor.Sexo = (string)dataReader["Sexo"];
+            proveedor.Edad = (string)dataReader["Edad"];
+            proveedor.Telefono = (string)dataReader["Telefono"];
+            proveedor.Direccion = (string)dataReader["Direccion"];
+            proveedor.NombreEmpresa= (string)dataReader["NombreEmpresa"];
+            proveedor.Pais = (string)dataReader["Pais"];
+            return proveedor;
+        }
+        public int Totalizar()
+        {
+
+            return ConsultarTodos().Count();
+        }
+        public int TotalizarMasculino()
+        {
+
+            return ConsultarTodos().Where(p => p.Sexo.Equals("M")).Count();
+        }
+        public int TotalizarFemenino()
+        {
+            return ConsultarTodos().Where(p => p.Sexo.Equals("F")).Count();
+        }
+     
     }
 }

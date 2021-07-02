@@ -13,7 +13,7 @@ namespace Entidad
         public decimal PrecioUnidad { get; set; }
         public int Cantidad { get; set; }
         public decimal Descuento { get; set; }
-
-
+        public string Descripcion { get; set; }
+        public decimal porcentajeIva = 1.19m;
     }
 }

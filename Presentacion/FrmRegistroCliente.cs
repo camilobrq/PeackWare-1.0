@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 using Entidad;
+using Logica;
 namespace Presentacion
 {
     public partial class FrmRegistroCliente : Form
     {
+        ClienteService clienteService;
         public FrmRegistroCliente()
         {
+            clienteService = new ClienteService(ConfigConnection.connectionString);
             InitializeComponent();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -86,11 +90,26 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+        
+            Cliente cliente = new Cliente
+            {
+                Identificacion = TxtIdentificacion.Text,
+                Nombre = TxtNombre.Text,
+                Sexo = ComboSexo.Text,
+                Edad = TxtEdad.Text,
+                Telefono = TxtTelefono.Text,
+                Direccion = TxtDireccion.Text
+            };
+            MessageBox.Show(clienteService.Guardar(cliente));
+
+        }
+        private void AgregarCliente()
+        {
             BorrarMenajes();
             if (ValidarCampos())
             {
                 AgregarCliente();
-                MessageBox.Show("Cliente Registrado Satisfactoriamente");
+                MessageBox.Show("Datos Correctos");
                 TxtNombre.Text = "";
                 TxtIdentificacion.Text = "";
                 TxtEdad.Text = "";
@@ -98,18 +117,7 @@ namespace Presentacion
                 TxtDireccion.Text = "";
 
             }
-        }
-        private void AgregarCliente()
-        {
-            Persona cliente = new Cliente
-            {
-                Identificacion = TxtIdentificacion.Text,
-                Nombre = TxtNombre.Text,
-                Sexo = ComboSexo.Text,
-                Edad = Convert.ToInt32(TxtEdad.Text),
-                Telefono=TxtTelefono.Text,
-                Direccion=TxtDireccion.Text
-            };
+      
         }
         private void TxtEdad_Validating(object sender, CancelEventArgs e)
         {
@@ -162,10 +170,7 @@ namespace Presentacion
 
         private void FrmRegistroCliente_Load(object sender, EventArgs e)
         {
-            ComboSexo.Items.Insert(0,"SELECCIONE");
-            ComboSexo.Items.Insert(1, "MASCULINO");
-            ComboSexo.Items.Insert(2, "FEMENINO");
-            ComboSexo.Items.Insert(3, "OTRO");
+          
         }
 
         private void FrmRegistroCliente_Validating(object sender, CancelEventArgs e)
@@ -175,14 +180,7 @@ namespace Presentacion
 
         private void ComboSexo_Validating(object sender, CancelEventArgs e)
         {
-            if (ComboSexo.SelectedItem == "SELECCIONE")
-            {
-                errorProvider1.SetError(ComboSexo, "Debe seleccionar una opcion");
-            }
-            else
-            {
-                errorProvider1.SetError(ComboSexo, "");
-            }
+            
         }
     }
 }

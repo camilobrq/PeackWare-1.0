@@ -45,8 +45,8 @@ namespace Presentacion
             this.button1 = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.ComboSexo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ComboSexo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -191,19 +191,22 @@ namespace Presentacion
             this.label8.TabIndex = 32;
             this.label8.Text = "Cliente";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ComboSexo
             // 
             this.ComboSexo.FormattingEnabled = true;
+            this.ComboSexo.Items.AddRange(new object[] {
+            "M",
+            "F"});
             this.ComboSexo.Location = new System.Drawing.Point(183, 155);
             this.ComboSexo.Name = "ComboSexo";
             this.ComboSexo.Size = new System.Drawing.Size(157, 21);
             this.ComboSexo.TabIndex = 33;
             this.ComboSexo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.ComboSexo.Validating += new System.ComponentModel.CancelEventHandler(this.ComboSexo_Validating);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // FrmRegistroCliente
             // 
@@ -253,7 +256,7 @@ namespace Presentacion
         private System.Windows.Forms.TextBox TxtIdentificacion;
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox ComboSexo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox ComboSexo;
     }
 }

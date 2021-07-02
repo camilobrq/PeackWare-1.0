@@ -8,7 +8,10 @@ namespace Entidad
 {
     public class Factura
     {
+        public Producto producto { get; set; }
         DetalleFactura detalleFactura = new DetalleFactura();
+  
+  
         public string IdFactura { get; set; }
         public string IdPersona { get; set; }
         public Persona persona { get; set; }

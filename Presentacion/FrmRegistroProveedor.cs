@@ -112,7 +112,7 @@ namespace Presentacion
                 Identificacion = TxtIdenficiacion.Text,
                 Nombre = TxtNombre.Text,
                 Sexo = ComboSexo.Text,
-                Edad = Convert.ToInt32(TxtEdad.Text),
+                Edad = TxtEdad.Text,
                 Telefono = TxtTelefono.Text,
                 Direccion = TxtDireccion.Text,
                 Pais = TxtPais.Text,
