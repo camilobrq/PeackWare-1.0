@@ -73,6 +73,7 @@ namespace Presentacion
             this.label1.Size = new System.Drawing.Size(69, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -84,6 +85,7 @@ namespace Presentacion
             this.label2.Size = new System.Drawing.Size(76, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Direccion:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -95,6 +97,7 @@ namespace Presentacion
             this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Telefono:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -106,6 +109,7 @@ namespace Presentacion
             this.label4.Size = new System.Drawing.Size(46, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Edad:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -117,6 +121,7 @@ namespace Presentacion
             this.label5.Size = new System.Drawing.Size(46, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "Sexo:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // TxtIdentificacion
             // 
@@ -124,6 +129,7 @@ namespace Presentacion
             this.TxtIdentificacion.Name = "TxtIdentificacion";
             this.TxtIdentificacion.Size = new System.Drawing.Size(157, 20);
             this.TxtIdentificacion.TabIndex = 6;
+            this.TxtIdentificacion.TextChanged += new System.EventHandler(this.TxtIdentificacion_TextChanged);
             this.TxtIdentificacion.Validating += new System.ComponentModel.CancelEventHandler(this.TxtIdentifiacion_Validating);
             // 
             // TxtNombre
@@ -141,6 +147,7 @@ namespace Presentacion
             this.TxtEdad.Name = "TxtEdad";
             this.TxtEdad.Size = new System.Drawing.Size(157, 20);
             this.TxtEdad.TabIndex = 9;
+            this.TxtEdad.TextChanged += new System.EventHandler(this.TxtEdad_TextChanged);
             this.TxtEdad.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEdad_Validating);
             // 
             // TxtTelefono
@@ -149,6 +156,7 @@ namespace Presentacion
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(157, 20);
             this.TxtTelefono.TabIndex = 10;
+            this.TxtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
             this.TxtTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.TxtTelefono_Validating);
             // 
             // TxtDireccion
@@ -157,6 +165,7 @@ namespace Presentacion
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(157, 20);
             this.TxtDireccion.TabIndex = 11;
+            this.TxtDireccion.TextChanged += new System.EventHandler(this.TxtDireccion_TextChanged);
             // 
             // button1
             // 
@@ -190,6 +199,7 @@ namespace Presentacion
             this.label8.Size = new System.Drawing.Size(71, 16);
             this.label8.TabIndex = 32;
             this.label8.Text = "Cliente";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // errorProvider1
             // 

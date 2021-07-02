@@ -30,16 +30,18 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation10 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnBarraArriba = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.BtnMinimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.Btnmaximizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.BtnRestablecer = new Bunifu.Framework.UI.BunifuImageButton();
             this.BtnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.PnOpciones = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelConsultar = new System.Windows.Forms.Panel();
             this.BtnConsultaFactura = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -69,8 +71,10 @@ namespace Presentacion
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.PanelTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.LogoTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnProducto = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnProdu = new System.Windows.Forms.Button();
             this.pnBarraArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btnmaximizar)).BeginInit();
@@ -106,6 +110,19 @@ namespace Presentacion
             this.pnBarraArriba.Size = new System.Drawing.Size(931, 52);
             this.pnBarraArriba.TabIndex = 0;
             this.pnBarraArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnBarraArriba_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.PanelTransition.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.label8.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(12, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 16);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "PeackWare";
             // 
             // BtnMinimizar
             // 
@@ -192,11 +209,28 @@ namespace Presentacion
             this.PnOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnOpciones.Location = new System.Drawing.Point(0, 52);
             this.PnOpciones.Name = "PnOpciones";
-            this.PnOpciones.Size = new System.Drawing.Size(194, 499);
+            this.PnOpciones.Size = new System.Drawing.Size(194, 736);
             this.PnOpciones.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.PanelTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(3, 711);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "PeackWare";
             // 
             // panelConsultar
             // 
+            this.panelConsultar.Controls.Add(this.panel3);
+            this.panelConsultar.Controls.Add(this.BtnProdu);
             this.panelConsultar.Controls.Add(this.BtnConsultaFactura);
             this.panelConsultar.Controls.Add(this.panel14);
             this.panelConsultar.Controls.Add(this.panel15);
@@ -206,10 +240,11 @@ namespace Presentacion
             this.LogoTransition.SetDecoration(this.panelConsultar, BunifuAnimatorNS.DecorationType.None);
             this.PanelTransition.SetDecoration(this.panelConsultar, BunifuAnimatorNS.DecorationType.None);
             this.panelConsultar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsultar.Location = new System.Drawing.Point(0, 442);
+            this.panelConsultar.Location = new System.Drawing.Point(0, 487);
             this.panelConsultar.Name = "panelConsultar";
-            this.panelConsultar.Size = new System.Drawing.Size(194, 134);
+            this.panelConsultar.Size = new System.Drawing.Size(194, 168);
             this.panelConsultar.TabIndex = 15;
+            this.panelConsultar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConsultar_Paint);
             // 
             // BtnConsultaFactura
             // 
@@ -241,6 +276,7 @@ namespace Presentacion
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(10, 35);
             this.panel14.TabIndex = 18;
+            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // panel15
             // 
@@ -251,6 +287,7 @@ namespace Presentacion
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(10, 35);
             this.panel15.TabIndex = 23;
+            this.panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.panel15_Paint);
             // 
             // BtnConsultaCliente
             // 
@@ -303,6 +340,7 @@ namespace Presentacion
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(10, 35);
             this.panel13.TabIndex = 19;
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
             // 
             // BtnConsulta
             // 
@@ -318,7 +356,7 @@ namespace Presentacion
             this.BtnConsulta.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnConsulta.Image = ((System.Drawing.Image)(resources.GetObject("BtnConsulta.Image")));
             this.BtnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConsulta.Location = new System.Drawing.Point(0, 397);
+            this.BtnConsulta.Location = new System.Drawing.Point(0, 442);
             this.BtnConsulta.Name = "BtnConsulta";
             this.BtnConsulta.Size = new System.Drawing.Size(194, 45);
             this.BtnConsulta.TabIndex = 14;
@@ -335,7 +373,7 @@ namespace Presentacion
             this.LogoTransition.SetDecoration(this.panelFactura, BunifuAnimatorNS.DecorationType.None);
             this.PanelTransition.SetDecoration(this.panelFactura, BunifuAnimatorNS.DecorationType.None);
             this.panelFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFactura.Location = new System.Drawing.Point(0, 300);
+            this.panelFactura.Location = new System.Drawing.Point(0, 345);
             this.panelFactura.Name = "panelFactura";
             this.panelFactura.Size = new System.Drawing.Size(194, 97);
             this.panelFactura.TabIndex = 13;
@@ -416,7 +454,7 @@ namespace Presentacion
             this.BtnFactura.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnFactura.Image = ((System.Drawing.Image)(resources.GetObject("BtnFactura.Image")));
             this.BtnFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFactura.Location = new System.Drawing.Point(0, 255);
+            this.BtnFactura.Location = new System.Drawing.Point(0, 300);
             this.BtnFactura.Name = "BtnFactura";
             this.BtnFactura.Size = new System.Drawing.Size(194, 45);
             this.BtnFactura.TabIndex = 12;
@@ -426,7 +464,9 @@ namespace Presentacion
             // 
             // panelRegistrar
             // 
+            this.panelRegistrar.Controls.Add(this.panel2);
             this.panelRegistrar.Controls.Add(this.BtnRegistroProveedores);
+            this.panelRegistrar.Controls.Add(this.BtnProducto);
             this.panelRegistrar.Controls.Add(this.panel7);
             this.panelRegistrar.Controls.Add(this.BtnRegistroClientes);
             this.panelRegistrar.Controls.Add(this.panel8);
@@ -435,7 +475,7 @@ namespace Presentacion
             this.panelRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRegistrar.Location = new System.Drawing.Point(0, 154);
             this.panelRegistrar.Name = "panelRegistrar";
-            this.panelRegistrar.Size = new System.Drawing.Size(194, 101);
+            this.panelRegistrar.Size = new System.Drawing.Size(194, 146);
             this.panelRegistrar.TabIndex = 11;
             // 
             // BtnRegistroProveedores
@@ -587,7 +627,7 @@ namespace Presentacion
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(194, 52);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(737, 499);
+            this.PanelContenedor.Size = new System.Drawing.Size(737, 736);
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PnPrincipal_Paint);
             // 
@@ -607,77 +647,111 @@ namespace Presentacion
             // 
             this.PanelTransition.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.PanelTransition.Cursor = null;
-            animation10.AnimateOnlyDifferences = true;
-            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
-            animation10.LeafCoeff = 0F;
-            animation10.MaxTime = 1F;
-            animation10.MinTime = 0F;
-            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
-            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
-            animation10.MosaicSize = 1;
-            animation10.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation10.RotateCoeff = 0F;
-            animation10.RotateLimit = 0F;
-            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
-            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
-            animation10.TimeCoeff = 2F;
-            animation10.TransparencyCoeff = 0F;
-            this.PanelTransition.DefaultAnimation = animation10;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 1;
+            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 2F;
+            animation3.TransparencyCoeff = 0F;
+            this.PanelTransition.DefaultAnimation = animation3;
             // 
             // LogoTransition
             // 
             this.LogoTransition.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
             this.LogoTransition.Cursor = null;
-            animation9.AnimateOnlyDifferences = true;
-            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
-            animation9.LeafCoeff = 0F;
-            animation9.MaxTime = 1F;
-            animation9.MinTime = 0F;
-            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
-            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
-            animation9.MosaicSize = 0;
-            animation9.Padding = new System.Windows.Forms.Padding(30);
-            animation9.RotateCoeff = 0.5F;
-            animation9.RotateLimit = 0.2F;
-            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
-            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
-            animation9.TimeCoeff = 0F;
-            animation9.TransparencyCoeff = 0F;
-            this.LogoTransition.DefaultAnimation = animation9;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(30);
+            animation4.RotateCoeff = 0.5F;
+            animation4.RotateLimit = 0.2F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.LogoTransition.DefaultAnimation = animation4;
             // 
-            // label8
+            // panel2
             // 
-            this.label8.AutoSize = true;
-            this.PanelTransition.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
-            this.label8.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(12, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 16);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "PeackWare";
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.LogoTransition.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelTransition.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.panel2.Location = new System.Drawing.Point(26, 97);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 35);
+            this.panel2.TabIndex = 24;
             // 
-            // label1
+            // BtnProducto
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.PanelTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(3, 587);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 16);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "PeackWare";
+            this.BtnProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.BtnProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.BtnProducto, BunifuAnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.BtnProducto, BunifuAnimatorNS.DecorationType.None);
+            this.BtnProducto.FlatAppearance.BorderSize = 0;
+            this.BtnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.BtnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnProducto.Image")));
+            this.BtnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProducto.Location = new System.Drawing.Point(35, 97);
+            this.BtnProducto.Name = "BtnProducto";
+            this.BtnProducto.Size = new System.Drawing.Size(157, 35);
+            this.BtnProducto.TabIndex = 25;
+            this.BtnProducto.Text = "      Producto";
+            this.BtnProducto.UseVisualStyleBackColor = false;
+            this.BtnProducto.Click += new System.EventHandler(this.BtnProducto_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.LogoTransition.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelTransition.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.panel3.Location = new System.Drawing.Point(26, 129);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 35);
+            this.panel3.TabIndex = 24;
+            // 
+            // BtnProdu
+            // 
+            this.BtnProdu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.BtnProdu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.BtnProdu, BunifuAnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.BtnProdu, BunifuAnimatorNS.DecorationType.None);
+            this.BtnProdu.FlatAppearance.BorderSize = 0;
+            this.BtnProdu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.BtnProdu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProdu.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProdu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnProdu.Image = ((System.Drawing.Image)(resources.GetObject("BtnProdu.Image")));
+            this.BtnProdu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProdu.Location = new System.Drawing.Point(35, 129);
+            this.BtnProdu.Name = "BtnProdu";
+            this.BtnProdu.Size = new System.Drawing.Size(162, 35);
+            this.BtnProdu.TabIndex = 25;
+            this.BtnProdu.Text = "    C. Productos";
+            this.BtnProdu.UseVisualStyleBackColor = false;
+            this.BtnProdu.Click += new System.EventHandler(this.BtnProdu_Click);
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 551);
+            this.ClientSize = new System.Drawing.Size(931, 788);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PnOpciones);
             this.Controls.Add(this.pnBarraArriba);
@@ -745,6 +819,10 @@ namespace Presentacion
         private System.Windows.Forms.Button BtnConsulta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnProducto;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button BtnProdu;
     }
 }
 

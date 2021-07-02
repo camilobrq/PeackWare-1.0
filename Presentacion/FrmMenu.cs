@@ -176,6 +176,38 @@ namespace Presentacion
             WindowState = FormWindowState.Minimized;
         }
 
+        private void panel15_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelConsultar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnProducto_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmRegistroProducto>();
+            OcultarSubMenu();
+        }
+
+        private void BtnProdu_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmConsultarProducto>();
+            OcultarSubMenu();
+        }
+
         private void Btnmaximizar_Click(object sender, EventArgs e)
         {
             lx = Location.X;

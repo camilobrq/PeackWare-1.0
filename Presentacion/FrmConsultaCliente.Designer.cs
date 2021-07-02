@@ -47,7 +47,6 @@ namespace Presentacion
             this.LbF = new System.Windows.Forms.Label();
             this.LbT = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -199,20 +198,12 @@ namespace Presentacion
             this.label2.TabIndex = 35;
             this.label2.Text = "Conteo De Clientes";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(365, 290);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 36;
-            // 
             // FrmConsultaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(720, 409);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LbT);
             this.Controls.Add(this.LbF);
@@ -257,6 +248,5 @@ namespace Presentacion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label LbFemenino;
         private System.Windows.Forms.Label LbMasculinos;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }

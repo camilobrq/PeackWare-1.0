@@ -71,6 +71,12 @@
     <Compile Include="FrmConsultaProveedores.Designer.cs">
       <DependentUpon>FrmConsultaProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultarProducto.Designer.cs">
+      <DependentUpon>FrmConsultarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFacturaCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     <Compile Include="FrmRegistroCliente.Designer.cs">
       <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistroProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroProducto.Designer.cs">
+      <DependentUpon>FrmRegistroProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistroProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,9 @@
     <EmbeddedResource Include="FrmConsultaProveedores.resx">
       <DependentUpon>FrmConsultaProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultarProducto.resx">
+      <DependentUpon>FrmConsultarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmFacturaCompra.resx">
       <DependentUpon>FrmFacturaCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistroCliente.resx">
       <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroProducto.resx">
+      <DependentUpon>FrmRegistroProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistroProveedor.resx">
       <DependentUpon>FrmRegistroProveedor.cs</DependentUpon>
